@@ -1,5 +1,6 @@
 const createPortfolioWebPage = () => {
 	const container = document.querySelector(".container")
+	const todoMiddle = document.querySelector(".todo_middle")
 	const heading = document.querySelector(".heading")
 	const photoDiv = document.querySelector(".photo_div")
 	const introDiv = document.querySelector(".intro_div")
@@ -7,32 +8,39 @@ const createPortfolioWebPage = () => {
 	const socialListElements = document.getElementsByTagName("li")
 	const social = document.querySelector(".social")
 
-	const createHeading = () => {
-		const headingText = "Hi, I'm Software Engineer !"
-		for (let i = 0; i < headingText.length; i++) {
-			let element = headingText[i]
-			let headingCurrentElement = document.createElement("h1")
-			headingCurrentElement.innerText = element
-			headingCurrentElement.style.transition = "1s ease"
-			headingCurrentElement.style.opacity = "0"
+	const addElementsInHeadingText = (text, titelElement, element) => {
+		for (let i = 0; i < text.length; i++) {
+			const currentElement = text[i]
+			element.style.transition = "1s ease"
+			titelElement.appendChild(element)
 			setTimeout(() => {
-				if (element === " ") {
-					headingCurrentElement.style.opacity = "1"
-					headingCurrentElement.style.marginLeft = "10px"
-					heading.appendChild(headingCurrentElement)
+				if (currentElement === " ") {
+					element.innerHTML += " "
 				} else {
-					headingCurrentElement.style.opacity = "1"
-					heading.appendChild(headingCurrentElement)
+					element.innerHTML += currentElement
 				}
 			}, i * 200)
 		}
 	}
 
-	createHeading()
+	const translateTitleToHeadingDiv = (titleElement) => {
+		setTimeout(() => {
+			titleElement.style.transform = "translateY(-100px)"
+		}, 7000)
+	}
 
-	setTimeout(() => {
-		heading.style.transform = "translateY(-200px)"
-	}, 7000)
+	const createHeadingText = () => {
+		const headingText = "Hi, I'm Software Engineer !"
+		const title = document.createElement("div")
+		title.setAttribute("class", "title")
+		todoMiddle.appendChild(title)
+		let headingCurrentElement = document.createElement("h1")
+		headingCurrentElement.innerHTML = ""
+		addElementsInHeadingText(headingText, title, headingCurrentElement)
+		translateTitleToHeadingDiv(title)
+	}
+
+	createHeadingText()
 
 	setTimeout(() => {
 		photoDiv.style.opacity = "1"
@@ -62,7 +70,7 @@ const createPortfolioWebPage = () => {
 	}, 18000)
 
 	setTimeout(() => {
-		photoDiv.style.transform = "translate(-400px)"
+		photoDiv.style.transform = "translate(-490px)"
 	}, 20000)
 
 	setTimeout(() => {
@@ -70,7 +78,7 @@ const createPortfolioWebPage = () => {
 	}, 22000)
 
 	setTimeout(() => {
-		introDiv.style.transform = "translate(400px)"
+		introDiv.style.transform = "translate(490px)"
 	}, 24000)
 }
 
