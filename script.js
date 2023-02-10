@@ -7,6 +7,8 @@ const createPortfolioWebPage = () => {
 	const nameElement = document.querySelector(".name")
 	const socialListElements = document.getElementsByTagName("li")
 	const social = document.querySelector(".social")
+	const image = document.querySelector(".image")
+	const portfolio = document.querySelector(".portfolio")
 
 	const addElementsInHeadingText = (text, titelElement, element) => {
 		for (let i = 0; i < text.length; i++) {
@@ -66,11 +68,12 @@ const createPortfolioWebPage = () => {
 	}, 15000)
 
 	setTimeout(() => {
-		social.style.transform = "translateY(150px)"
+		social.style.transform = "translateY(180px)"
 	}, 18000)
 
 	setTimeout(() => {
 		photoDiv.style.transform = "translate(-490px)"
+		photoDiv.style.scale = "0.7"
 	}, 20000)
 
 	setTimeout(() => {
@@ -79,7 +82,44 @@ const createPortfolioWebPage = () => {
 
 	setTimeout(() => {
 		introDiv.style.transform = "translate(490px)"
+		introDiv.style.scale = "0.7"
 	}, 24000)
+
+	setTimeout(() => {
+		portfolio.style.opacity = "1"
+	}, 28000)
+
+	setTimeout(() => {
+		portfolio.style.transform = "translateY(200px)"
+		portfolio.style.scale = "1"
+	}, 30000)
+
+	image.addEventListener("click", () => {
+		portfolio.style.transform = "translate(600px, 0px)"
+		portfolio.style.scale = "0.7"
+		introDiv.style.transform = "translate(-600px)"
+		introDiv.style.scale = "0.7"
+		photoDiv.style.transform = "translate(10px, 150px)"
+		photoDiv.style.scale = "1"
+	})
+
+	introDiv.addEventListener("click", () => {
+		photoDiv.style.transform = "translate(600px, 0px)"
+		photoDiv.style.scale = "0.7"
+		portfolio.style.transform = "translate(-600px)"
+		portfolio.style.scale = "0.7"
+		introDiv.style.transform = "translate(10px, 150px)"
+		introDiv.style.scale = "1"
+	})
+
+	portfolio.addEventListener("click", () => {
+		introDiv.style.transform = "translate(600px, 0px)"
+		introDiv.style.scale = "0.7"
+		photoDiv.style.transform = "translate(-600px)"
+		photoDiv.style.scale = "0.7"
+		portfolio.style.transform = "translate(10px, 150px)"
+		portfolio.style.scale = "1"
+	})
 }
 
 createPortfolioWebPage()

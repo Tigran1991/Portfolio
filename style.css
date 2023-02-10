@@ -51,12 +51,14 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: 300px;
+	height: 300px;
 	width: fit-content;
 	height: fit-content;
 	position: absolute;
 	font-family: "Righteous", cursive;
 	color: #fff;
-	transition: 3s ease;
+	transition: 1s ease;
 	opacity: 0;
 	z-index: 1;
 }
@@ -73,7 +75,7 @@ body {
 	opacity: 0;
 	width: 300px;
 	height: 300px;
-	transition: 3s ease;
+	transition: 1s ease;
 	position: absolute;
 	text-align: center;
 	z-index: 0;
@@ -87,6 +89,17 @@ body {
 	cursor: pointer;
 	transition: 1s ease;
 	scale: 1.1;
+}
+
+.portfolio {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 300px;
+	height: 300px;
+	opacity: 0;
+	transition: 1s ease;
+	scale: 0.7;
 }
 
 .social {
