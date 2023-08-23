@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio Website using HTML and CSS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="container nav-section">
+                <ul class="menu">
+                    <li>
+                        <a href="#footer-section" class="menu-link">home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link">about</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="menu-link">services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-link">works</a>
+                    </li>
+                </ul>
+                <button class="contact-btn">CONTACT</button>
+            </div>
+        </nav>
+        <div class="percentage">
+            <div class="percentage-shape"></div>
+        </div>
+
+        <main>
+            <div class="container about-section">
+                <div class="image-block">
+                    <div class="image-wrapper">
+                        <img
+                            src="images/my-photo.jpg"
+                            class="my-photo"
+                            alt="my photo"
+                        />
+                    </div>
+                </div>
+                <div class="content-block">
+                    <div class="content-wrapper">
+                        <div class="greeting-wrapper">
+                            <h1 class="greeting"></h1>
+                            <spa class="dash">|</spa>
+                        </div>
+                        <p class="intro">
+                            Hi, I am Tigran and I work as a web developer. I am
+                            a software engineer who loves to create websites as
+                            well as apps for people. I think that people should
+                            look at the bigger picture when they are building
+                            something. I love to work in groups where everyone
+                            can voice their opinions and ideas.
+                        </p>
+                        <a class="download-btn" href="./files/CV.pdf">Download CV</a>
+                    </div>
+                </div>
+            </div>
+            <div class="container services-section" id="services"></div>
+            <div class="container works-section"></div>
+        </main>
+        <footer>
+            <div class="container footer-section">
+                My Social media profiles
+                <ul class="social-media">
+                    <li>
+                        <a href="#" class="profile">
+                            <i class="fa-brands fa-linkedin fa-xl"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="profile">
+                            <i class="fa-brands fa-google-plus fa-xl"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="profile">
+                            <i class="fa-brands fa-square-x-twitter fa-xl"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="copyright">
+                    <i class="fa-solid fa-copyright"></i>
+                    Copyright 2023
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
